@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://media.istockphoto.com/id/1391178054/photo/happy-new-year-2023-festive-silvester-new-years-eve-party-background-greeting-card-golden.jpg?b=1&s=170667a&w=0&k=20&c=OBtqn06MGDOHvSUsNFNXkiaQF7YURgYzgCgtyRYrwG8='); 
+    background-size:cover;
+    color: yellow;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.countdown-container {
+    text-align: center;
+    z-index: 1;
+    border: 7px solid gold;
+}
+
+#countdown {
+    font-size: 5em;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
