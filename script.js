@@ -15,7 +15,7 @@ function updateCountdown() {
 
     if (distance < 0) {
         clearInterval(interval);
-        countdown.innerHTML = "Happy New Year!";
+        countdown.innerHTML = "🎉 Happy New Year 🎉";
     }
 }
 
