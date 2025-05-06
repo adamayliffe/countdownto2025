@@ -10,29 +10,42 @@
             margin: 0;
             padding: 0;
         }
+
+        /* Header Styling */
         .header {
             background-color: #5bc0de;
             padding: 10px;
-            text-align: center;
         }
-        .header h1 {
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .header-container h1 {
             font-size: 24px;
             margin: 0;
+            color: white;
         }
+
+        /* Hamburger Menu Button */
+        .menu-button {
+            display: block;
+            font-size: 24px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: white;
+            padding: 5px 10px;
+        }
+
+        /* Menu Styling */
         .menu-container {
-            position: relative;
             text-align: center;
         }
-        .menu-button {
-            display: none;
-            background-color: #5bc0de;
-            color: white;
-            padding: 10px;
-            font-size: 18px;
-            border: none;
-            width: 100%;
-            cursor: pointer;
-        }
+
         .menu {
             display: flex;
             justify-content: center;
@@ -42,6 +55,7 @@
             flex-wrap: wrap;
             align-items: center;
         }
+
         .menu a {
             margin: 10px 15px;
             text-decoration: none;
@@ -49,14 +63,19 @@
             font-size: 18px;
             cursor: pointer;
         }
+
         .menu li {
             position: relative;
         }
+
+        /* Dropdown menu */
         .dropdown {
             list-style: none;
             padding: 0;
             margin: 0;
         }
+
+        /* Desktop dropdown expands downward */
         @media (min-width: 769px) {
             .dropdown {
                 display: none;
@@ -70,72 +89,74 @@
                 text-align: left;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             }
+
             .menu li:hover .dropdown {
                 display: block;
             }
         }
+
+        /* Mobile mode dropdown stays inside menu */
         @media (max-width: 768px) {
             .menu {
                 display: none;
                 flex-direction: column;
                 text-align: center;
             }
+
             .menu a {
                 display: block;
                 padding: 10px;
             }
+
             .menu-button {
                 display: block;
             }
+
             .dropdown {
                 position: static;
                 width: auto;
                 text-align: center;
                 display: none;
             }
+
             .link-button {
                 width: 80%;
                 margin: 10px auto;
             }
         }
-        .link-button {
-            display: block;
-            padding: 10px 20px;
-            background-color: indigo;
-            color: white;
-            text-align: center;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 18px;
-            border: none;
-            cursor: pointer;
-            margin-top: 15px;
-        }
+
+        /* Footer Styling */
         .footer {
             background-color: white;
             color: #5bc0de;
             text-align: center;
             padding: 20px;
         }
+
         .footer-container {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
         }
+
         .footer-section {
             flex: 1;
             margin: 10px;
         }
+
         .footer-section h2, .footer-section h3 {
             margin-bottom: 10px;
         }
+
         .footer-section ul {
             list-style: none;
             padding: 0;
         }
+
         .footer-section ul li {
             margin: 5px 0;
         }
+
         .contact-button {
             display: block;
             background-color: indigo;
@@ -145,11 +166,13 @@
             text-decoration: none;
             margin-top: 10px;
         }
+
         @media (max-width: 768px) {
             .footer-container {
                 flex-direction: column;
                 align-items: center;
             }
+
             .footer-section {
                 width: 100%;
                 text-align: center;
@@ -159,10 +182,13 @@
 </head>
 <body>
     <div class="header">
-        <h1>Unity🛡️Cyber Networks</h1>
+        <div class="header-container">
+            <h1>Unity🛡️Cyber Networks</h1>
+            <button class="menu-button" onclick="toggleMenu()">☰</button>
+        </div>
     </div>
+    
     <div class="menu-container">
-        <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
         <ul class="menu" id="menu">
             <li><a href="index.html">Home</a></li>
             <li>
@@ -177,9 +203,6 @@
             <li><a href="contact.html" class="link-button" style="color:white;">Free Consultation</a></li>
         </ul>
     </div>
-<br>
-<br>
-<br>
     
     <footer class="footer">
         <div class="footer-container">
@@ -189,9 +212,9 @@
             <div class="footer-section overview">
                 <h3>Overview</h3>
                 <ul>
-                    <li><a href="sharepoint.html" style="text-decoration:none; color:#5bc0de; "> SharePoint Migrations</a></li>
-                    <li><a href="network-monitoring.html" style="text-decoration:none; color:#5bc0de; "> Network Monitoring</a></li>
-                    <li><a href="network-management.html" style="text-decoration:none;  color:#5bc0de;"> Network Management</a></li>
+                    <li><a href="sharepoint.html" style="text-decoration:none; color:#5bc0de;"> SharePoint Migrations</a></li>
+                    <li><a href="network-monitoring.html" style="text-decoration:none; color:#5bc0de;"> Network Monitoring</a></li>
+                    <li><a href="network-management.html" style="text-decoration:none; color:#5bc0de;"> Network Management</a></li>
                 </ul>
             </div>
             <div class="footer-section business-info">
