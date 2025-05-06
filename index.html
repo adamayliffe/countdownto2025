@@ -125,6 +125,20 @@
             }
         }
 
+        /* Free Consultation Button */
+        .link-button {
+            display: block;
+            padding: 12px 20px;
+            background-color: indigo;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
         /* Footer Styling */
         .footer {
             background-color: white;
@@ -200,7 +214,7 @@
                 </ul>
             </li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html" class="link-button" style="color:white;">Free Consultation</a></li>
+            <li><a href="contact.html" class="link-button">Free Consultation</a></li>
         </ul>
     </div>
     
@@ -230,7 +244,7 @@
     <script>
         function toggleMenu() {
             var menu = document.getElementById('menu');
-            menu.style.display = menu.style.display === 'none' || menu.style.display === '' ? 'flex' : 'none';
+            menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
         }
 
         document.getElementById('services').addEventListener('click', function() {
