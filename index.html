@@ -3,22 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Year's Eve Countdown</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>NORTHOUT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #5bc0de;
+            padding: 10px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+            display: inline;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+        .menu a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #5bc0de;
+            font-size: 18px;
+        }
+        .dropdown {
+            display: none;
+            flex-direction: column;
+            background-color: #e9ecef;
+            padding: 10px;
+        }
+        .dropdown a {
+            margin: 5px 0;
+            text-decoration: none;
+            color: #343a40;
+            font-size: 16px;
+        }
+        .button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #6f42c1;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+            color: #6f42c1;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <div class="countdown-container">
-	<div style="text-align: center; font-size: 100px;
-            background: linear-gradient(to right, white, gold,
-            white, gold);
-            -webkit-background-clip: text;
-            color: transparent;">
-    Count do to
-</div>
-        <h1>🍾 2️⃣0️⃣2️⃣5️⃣ 🍾</h1>
-        <div id="countdown"></div>
+    <div class="header">
+        <h1>NORTHOUT</h1>
     </div>
-    <canvas id="shooting-stars"></canvas>
-    <script src="script.js"></script>
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#" id="services">Services</a>
+    </div>
+    <div class="dropdown" id="dropdown">
+        <a href="#">Migrate to Sharepoint?</a>
+        <a href="#">About Us</a>
+        <a href="#">Free Consultation</a>
+    </div>
+    <a href="#" class="button">Free Consultation</a>
+    <div class="footer">
+        Solutions for every business need.
+    </div>
+    <script>
+        document.getElementById('services').addEventListener('click', function() {
+            var dropdown = document.getElementById('dropdown');
+            dropdown.style.display = dropdown.style.display === 'none' || dropdown.style.display === '' ? 'flex' : 'none';
+        });
+    </script>
 </body>
 </html>
