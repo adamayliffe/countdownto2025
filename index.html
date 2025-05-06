@@ -48,21 +48,31 @@
             color: #5bc0de;
             font-size: 18px;
             cursor: pointer;
+            position: relative;
         }
         .dropdown {
             display: none;
-            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
             background-color: white;
             padding: 10px;
             border-radius: 5px;
-            width: 100%;
-            text-align: center;
+            min-width: 200px;
+            text-align: left;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
         .dropdown a {
             margin: 5px 0;
             text-decoration: none;
-            color:  #5bc0de;
+            color: #5bc0de;
             font-size: 16px;
+            display: block;
+        }
+        .menu li {
+            position: relative;
+        }
+        .menu li:hover .dropdown {
             display: block;
         }
         .link-button {
@@ -78,7 +88,6 @@
             cursor: pointer;
             margin-top: 15px;
         }
-        
         .footer {
             text-align: center;
             padding: 10px;
@@ -104,6 +113,11 @@
                 width: 80%;
                 margin: 10px auto;
             }
+            .dropdown {
+                position: static;
+                width: auto;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -117,11 +131,11 @@
             <li><a href="index.html">Home</a></li>
             <li>
                 <a id="services">Services ▼</a>
-                <div class="dropdown" id="dropdown">
-                    <a href="network.html">Network Management</a>
-                    <a href="assets.html">Assets Management</a>
-                    <a href="sharepoint.html">SharePoint Migrations</a>
-                </div>
+                <ul class="dropdown">
+                    <li><a href="network.html">Network Management</a></li>
+                    <li><a href="assets.html">Assets Management</a></li>
+                    <li><a href="sharepoint.html">SharePoint Migrations</a></li>
+                </ul>
             </li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="consultation.html" class="link-button" style="color:white;">Free Consultation</a></li>
@@ -136,19 +150,6 @@
             var menu = document.getElementById('menu');
             menu.style.display = menu.style.display === 'none' || menu.style.display === '' ? 'flex' : 'none';
         }
-
-        document.getElementById('services').addEventListener('click', function() {
-            var dropdown = document.getElementById('dropdown');
-            dropdown.style.display = dropdown.style.display === 'none' || dropdown.style.display === '' ? 'block' : 'none';
-        });
-
-        document.addEventListener('click', function(event) {
-            var services = document.getElementById('services');
-            var dropdown = document.getElementById('dropdown');
-            if (!services.contains(event.target) && !dropdown.contains(event.target)) {
-                dropdown.style.display = 'none';
-            }
-        });
     </script>
 </body>
 </html>
