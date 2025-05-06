@@ -21,6 +21,7 @@
         }
         .menu-container {
             position: relative;
+            text-align: center;
         }
         .menu-button {
             display: none;
@@ -40,10 +41,9 @@
             list-style: none;
             flex-wrap: wrap;
             align-items: center;
-            flex-direction: column;
         }
         .menu a {
-            margin: 10px 0;
+            margin: 10px 15px;
             text-decoration: none;
             color: #5bc0de;
             font-size: 18px;
@@ -89,6 +89,7 @@
         @media (max-width: 768px) {
             .menu {
                 display: none;
+                flex-direction: column;
                 text-align: center;
             }
             .menu a {
